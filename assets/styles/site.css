@@ -1,0 +1,34 @@
+
+body {
+    font-size: 15px;
+}
+
+.quote {
+    background-color: rgb(168, 211, 253);
+    margin-bottom: 50px;
+}
+
+.quote-text {
+    font-style: italic
+}
+
+.page-info {
+    
+}
+
+ 
+.banner {
+    width: 100%;
+    margin-bottom: 1.5px;
+}
+
+
+#page-content {
+    width: 100%
+}
+
+#page-content img {
+    width: 100%
+}
+
+
