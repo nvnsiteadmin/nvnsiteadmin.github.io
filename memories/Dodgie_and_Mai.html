@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-    <title>Nguyen Van Nguu - From Dodgie and Mai </title>
+        <title>Nguyen Van Nguu - From Dodgie and Mai </title>
     <meta charset="utf-8">
     <meta name="author" value="">
     <meta name="description" value="A celebration of life">
@@ -50,7 +50,8 @@
     
 </head>
 <body class="container" >
-    <header style="text-align: center;">
+
+        <header style="text-align: center;">
         <div>
             <img src="/assets/images/banner.jpg" class="banner lazyload"/>
         </div>
@@ -63,20 +64,21 @@
         <div>
             <nav class="menuitems">
             
-                <a  href="/">Home</a>
+                <span class="nav-item"><a class="button" href="/">Home</a></span>
             
-                <a  href="/gallery/gallery.html">Gallery</a>
+                <span class="nav-item"><a class="button" href="/gallery/gallery.html">Gallery</a></span>
             
-                <a  href="/writings.html">Writings</a>
+                <span class="nav-item"><a class="button" href="/writings.html">Writings</a></span>
             
-                <a  href="/memories.html">Memories</a>
+                <span class="nav-item"><a class="button" href="/memories.html">Memories</a></span>
             
-                <a  href="/about.html">About</a>
+                <span class="nav-item"><a class="button" href="/about.html">About</a></span>
             
             </nav>
         </div>
     </header>
-    <div id="content" class="container">
+
+    <div id="content">
         <div id="page-info" style="margin: 24px;">
 <h5 style="margin-bottom: 5px">From Dodgie and Mai</h5>
 <span>by Dodgie and Mai</span>
@@ -98,13 +100,13 @@ You will always be fondly remembered, Nguu. We thank God for you!</p>
 <stye>
 </stye>
     </div>
+
     
+
     <footer class="container" style="width: 100%;">
-        <div id="quotes-div" >
+        <div id="quotes-div" style="font-size: 12px; overflow: hidden;" >
         </div>
-
-        <div id="legal-info">
-
+        <div id="legal-info" style="position: relative;">
             Copyright &COPY; 2021 Nguyen Van Nguu. All rights reserved
         </div>
     </footer>
@@ -116,7 +118,7 @@ You will always be fondly remembered, Nguu. We thank God for you!</p>
         setRandomQuote();
         setInterval(function(){
             setRandomQuote();
-        }, 30000);
+        }, 15000);
 
     </script>
 </body>

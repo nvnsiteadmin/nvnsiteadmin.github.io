@@ -18,5 +18,3 @@ function createQuoteDiv(quote) {
     return div;
 }
 
-
-

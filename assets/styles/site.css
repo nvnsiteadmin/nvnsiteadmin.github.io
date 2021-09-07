@@ -21,8 +21,16 @@ body {
     font-style: italic
 }
 
-.page-info {
-    
+.menuitems {
+    width:  100%;
+}
+
+.button {
+    border-width: 0;
+}
+
+.button:hover {
+    background-color: #b0effc;
 }
 
  
@@ -31,6 +39,31 @@ body {
     margin-bottom: 1.5px;
 }
 
+.gallery {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.thumbnail {
+    max-width: 300px
+}
+
+.thumbnail:hover {
+    border-color: #edf9f9;
+    border-style: solid;
+}
+
+.thumbnail img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+.thumbnail img:hover {
+    max-width: 350px;
+}
 
 #page-content {
     width: 100%
