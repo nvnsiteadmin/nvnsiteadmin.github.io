@@ -61,7 +61,7 @@ body {
     border-radius: 15px;
 }
 
-.thumbnail img:hover {
+.thumbnail img:hover { 
     max-width: 350px;
 }
 

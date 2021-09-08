@@ -18,3 +18,9 @@ function createQuoteDiv(quote) {
     return div;
 }
 
+function toggleElementDisplay(elem_id) {
+    let elem = document.getElementById(elem_id);
+    let displayType = elem.style.display;
+
+    elem.style.display = (displayType === 'none') ? 'block' : 'none';
+}

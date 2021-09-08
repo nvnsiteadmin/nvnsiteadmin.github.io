@@ -53,7 +53,7 @@
 
         <header style="text-align: center;">
         <div>
-            <img src="/assets/images/banner.jpg" class="banner lazyload"/>
+            <a href="/index.html"><img src="/assets/images/banner.jpg" class="banner lazyload"/></a>
         </div>
         
         <div style="margin-bottom: 2rem; ">
@@ -78,7 +78,7 @@
         </div>
     </header>
 
-    <div id="content">
+    <div id="content" >
         <div id="page-info" style="margin: 24px;">
 <h5 style="margin-bottom: 5px">Artwork</h5>
 
@@ -89,28 +89,73 @@
 </div>
 
 <div id="page-content">
+<script type="text/javascript">   
+function displayImage(img_name) {
+    let div = document.getElementById("img-display");
+    let canvasDiv = div.getElementsByClassName('img-div')[0];
+    let img = document.createElement('img');
+    img.src = img_name;
+    img.className = "displayed-image";
+    canvasDiv.innerHTML = "";
+    canvasDiv.appendChild(img);
+    div.style.display = 'block';
+}
+</script>
+
+<style type="text/css">
+
+.show-image {
+    position: fixed;
+    top:  50px;
+    overflow: auto;
+    z-index: 10; 
+    width: 90%;
+    max-height: 80%;
+    background-color: #e5ecfc;
+    border-radius: 15px;
+    display: none;
+}
+
+.img-div {
+   max-width: 800px;
+   height: 60%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.displayed-image {
+    width: 80%;
+}
+
+</style>
 
 
+
+<div id="img-display" class="container show-image">  
+   <div id="close"> <a class="button" onclick="toggleElementDisplay('img-display')">close</a> </div>
+   <div class="img-div"> </div>
+</div>
 <div class="container">
+
 
    
    <span><strong>Foot print of love</strong></span>
    <div class="gallery">
       
          <div class="thumbnail" >
-            <a href="#img-id"><img class="lazyload" src="/assets/images/artwork/Foot print of love 129102019.jpg" /></a>
+            <a href="#img-id" onclick="displayImage('/assets/images/artwork/Foot print of love 129102019.jpg')"><img class="lazyload" src="/assets/images/artwork/Foot print of love 129102019.jpg" /></a>
          </div>
       
          <div class="thumbnail" >
-            <a href="#img-id"><img class="lazyload" src="/assets/images/artwork/Foot print of love 229102019.jpg" /></a>
+            <a href="#img-id" onclick="displayImage('/assets/images/artwork/Foot print of love 229102019.jpg')"><img class="lazyload" src="/assets/images/artwork/Foot print of love 229102019.jpg" /></a>
          </div>
       
          <div class="thumbnail" >
-            <a href="#img-id"><img class="lazyload" src="/assets/images/artwork/Foot print of love 329102019.jpg" /></a>
+            <a href="#img-id" onclick="displayImage('/assets/images/artwork/Foot print of love 329102019.jpg')"><img class="lazyload" src="/assets/images/artwork/Foot print of love 329102019.jpg" /></a>
          </div>
       
          <div class="thumbnail" >
-            <a href="#img-id"><img class="lazyload" src="/assets/images/artwork/Foot print of love 429102019.jpg" /></a>
+            <a href="#img-id" onclick="displayImage('/assets/images/artwork/Foot print of love 429102019.jpg')"><img class="lazyload" src="/assets/images/artwork/Foot print of love 429102019.jpg" /></a>
          </div>
             
    </div>
@@ -119,8 +164,7 @@
 </div>
 
 
-<div id="" style="z-index: 9;">  
-</div>
+
 </div>
 
 <stye>
@@ -138,7 +182,6 @@
     </footer>
     
     <script type="text/javascript" >
-        console.log("test")
         $("img.lazyload").lazyload();
 
         setRandomQuote();
