@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+        <title>Nguyen Van Nguu - The colorful garden you left </title>
+    <meta charset="utf-8">
+    <meta name="author" value="">
+    <meta name="description" value="A celebration of life">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">    -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <meta property="og:title" content="Nguyen Van Nguu - The colorful garden you left ">
+    <meta property="og:image" content=" /assets/images/nguu_portrait_sm.jpg ">  
+    <meta property="og:description" content=" A celebration of life ">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <link rel="stylesheet" href="/assets/styles/normalize.css" />
+    <link rel="stylesheet" href="/assets/styles/skeleton.css" />
+    <link rel="stylesheet" href="/assets/styles/site.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+    <script type="text/javascript">
+        let quotes = [];
+        
+        let ind = 0;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Life part 2", year: 2015, text: "Life is to get up in the morning<br />Be inspired by love and gratefulness<br />For love relieves the loneliness<br />And appreciation enhances the happiness<br />Pass dreams into actions<br />And embrace results of actions into new dreams<br />There is always tomorrow" });
+        ind++;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Missing the Childhood River", year: 2017, text: "Tens of years living far away from Vietnam<br />This morning suddenly I missed and saw in my dream the Perfume River<br />And the paper boat that I set afloat on the River<br />In an autumn festival of my childhood<br /><br />The boat that carried my childhood smile<br />I wonder where is it now?<br />But I always embrace it tightly along my life <br />Oh the paper boat and the river of yesterday" });
+        ind++;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Home is a Feeling", year: 2019, text: "I can still remember thinking <br />With a feeling of peace and belonging <br />Home is the place where you feel in control <br />Home isn’t a place, it’s a feeling<br /> <br />You can be miles away and still be at home <br />By reading your favorite childhood book <br />A feeling of home will grab your heart <br />And you feel most comfortable and smart<br />" });
+        ind++;
+        
+    </script>
+    
+    
+</head>
+<body class="container" >
+
+        <header style="text-align: center;">
+        <div>
+            <a href="/index.html"><img src="/assets/images/banner.jpg" class="banner lazyload"/></a>
+        </div>
+        
+        <div>
+            <nav class="menuitems">
+            
+                <span class="nav-item"><a class="button" href="/">Home</a></span>
+            
+                <span class="nav-item"><a class="button" href="/gallery/gallery.html">Gallery</a></span>
+            
+                <span class="nav-item"><a class="button" href="/writings.html">Writings</a></span>
+            
+                <span class="nav-item"><a class="button" href="/memories.html">Memories</a></span>
+            
+            </nav>
+        </div>
+
+        <div style="margin-bottom: 2rem; ">
+            <span class=""> A celebration of life  </span>
+        </div>
+
+    </header>
+
+    <div id="content" >
+        <div id="page-info" style="margin: 24px;">
+<h5 style="margin-bottom: 5px">The colorful garden you left</h5>
+<span>by Francesco</span>
+
+
+</div>
+
+<div id="page-content">
+<p>Goodbye Nguu, farewell papa. I will miss your smiles, so big and beautiful, for your grandchildren. I will miss your care in preparing and serving rice for all of us. And I will miss our chats about life and your positive attitude about new things. Good men like you plant strong seeds. The colourful garden you left behind will continue to bear fruit, through the generations. Fly free and in peace. We will not disturb you.</p>
+
+
+<div id="back"> 
+	<a href="/memories.html" class="button">Back</a>
+</div>
+
+</div>
+
+<stye>
+</stye>
+    </div>
+
+    
+
+    <footer class="container" style="width: 100%;">
+        <div id="quotes-div" style="font-size: 12px; overflow: hidden;" >
+        </div>
+        <div id="legal-info" style="position: relative;">
+            Copyright &COPY; 2021 Nguyen Van Nguu. All rights reserved
+        </div>
+    </footer>
+    
+    <script type="text/javascript" >
+        $("img.lazyload").lazyload();
+
+        setRandomQuote();
+        setInterval(function(){
+            setRandomQuote();
+        }, 15000);
+
+    </script>
+</body>
+
+</html> 
