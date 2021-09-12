@@ -78,7 +78,7 @@
 
     <div id="content" >
         <div id="page-info" style="margin: 24px;">
-<h5 style="margin-bottom: 5px">Family & Friends</h5>
+<h3 style="margin-bottom: 5px">Family & Friends</h3>
 
 
 <em>Pictures of Nguu's family and friends</em>
@@ -93,7 +93,8 @@ function displayImage(img_name) {
     let canvasDiv = div.getElementsByClassName('img-div')[0];
     let img = document.createElement('img');
     img.src = img_name;
-    img.className = "displayed-image";
+    img.style.width = "75%";
+    img.style.margin = "0 auto";
     canvasDiv.innerHTML = "";
     canvasDiv.appendChild(img);
     div.style.display = 'block';
@@ -104,34 +105,48 @@ function displayImage(img_name) {
 
 .show-image {
     position: fixed;
-    top:  50px;
+    top:  15%;
     overflow: auto;
     z-index: 10; 
     width: 90%;
+    height: 1024px;
     max-height: 80%;
     background-color: #e5ecfc;
     border-radius: 15px;
     display: none;
+    overflow: hidden;
 }
 
 .img-div {
-   max-width: 800px;
-   height: 60%;
-   margin-left: auto;
-   margin-right: auto;
+   width: 100%;
+   height: 88%;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
-.displayed-image {
-    width: 80%;
+
+.close-div {
+   width: 100%;
+   height: 75px;
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;   
 }
+
 
 </style>
 
 
 
 <div id="img-display" class="container show-image">  
-   <div id="close"> <a class="button" onclick="toggleElementDisplay('img-display')">close</a> </div>
+   <div id="top-border" style="height: 25px;"></div>
    <div class="img-div"> </div>
+   <div class="close-div" > <button onclick="toggleElementDisplay('img-display')">close</button> </div>
 </div>
 <div >
 
