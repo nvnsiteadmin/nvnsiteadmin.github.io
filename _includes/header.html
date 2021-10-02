@@ -1,0 +1,18 @@
+    <header style="text-align: center;">
+        <div>
+            <a href="/index.html"><img src="/assets/images/banner.jpg" class="banner lazyload"/></a>
+        </div>
+        
+        <div>
+            <nav class="menuitems">
+            {% for nav_point in site.data.nav %}
+                <span class="nav-item"><a class="button" href="{{ nav_point.link }}">{{ nav_point.name }}</a></span>
+            {% endfor %}
+            </nav>
+        </div>
+
+        <div style="margin-bottom: 2rem; ">
+            <span class="">{% if page.description %} {{ page.description }} {% else %} {{ site.description  }} {% endif %} </span>
+        </div>
+
+    </header>

@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+    {% include head.html %}
+    <script type="text/javascript">
+        let quotes = [];
+        
+        let ind = 0;
+        {% for quote in site.quotes %}
+        {% assign text = quote.content | newline_to_br | strip_newlines %}
+        quotes.push({ author: "{{ quote.author }}", title: "{{ quote.title }}", year: {{ quote.year }}, text: "{{ text }}" });
+        ind++;
+        {% endfor %}
+    </script>
+    
+    
+</head>
+<body class="container" >
+
+    {% include header.html %}
+
+    <div id="content" >
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+    
+    <script type="text/javascript" >
+        $("img.lazyload").lazyload();
+
+        setRandomQuote();
+        setInterval(function(){
+            setRandomQuote();
+        }, 15000);
+
+    </script>
+</body>
+
+</html> 

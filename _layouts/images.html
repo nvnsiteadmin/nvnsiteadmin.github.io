@@ -1,0 +1,105 @@
+---
+layout: page
+category: gallery
+---
+
+<script type="text/javascript">   
+function displayImage(img_name) {
+    let div = document.getElementById("img-display");
+    let canvasDiv = div.getElementsByClassName('img-div')[0];
+    let img = new Image();
+    let imgWidth = img.naturalWidth ;
+    let imgHeight = img.naturalHeight ;
+    img.onload = function () {
+       imgWidth = this.width;
+       imgHeight = this.height;
+       console.log(imgWidth + " " + imgHeight);
+       img.style.width = (imgWidth >= imgHeight) ? "90%" : "40%";
+    }
+
+    img.src = img_name;
+    console.log(imgWidth + " " + imgHeight);
+    
+    img.style.margin = "auto";
+    canvasDiv.innerHTML = "";
+    canvasDiv.appendChild(img);
+    div.style.display = 'block';
+}
+</script>
+
+<style type="text/css">
+
+.show-image {
+    position: fixed;
+    top:  15%;
+    overflow: auto;
+    z-index: 10; 
+    width: 90%;
+    height: 1024px;
+    max-height: 80%;
+    background-color: #e5ecfc;
+    border-radius: 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.img-div {
+   width: 100%;
+   height: 88%;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.close-div {
+   width: 100%;
+   height: 75px;
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;   
+}
+
+
+</style>
+
+{% assign gallery = site.data.gallery[page.gallery_category] %}
+
+<div id="img-display" class="container show-image">  
+   <div id="top-border" style="height: 25px;"></div>
+   <div class="img-div"> </div>
+   <div class="close-div" > <button onclick="toggleElementDisplay('img-display')">close</button> </div>
+</div>
+<div >
+
+{% if gallery.groups %}
+   {% for group in gallery.groups %}
+   <div style="margin-bottom: 35px">
+
+      <span><h5>{{ group.name }}</h5></span>
+      <div class="gallery">
+      {% for img in group.images %}
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('{{ img }}')"><img class="lazyload" src="{{ img }}" /></a>
+            </div>
+      {% endfor%}      
+      </div>
+      
+   </div>
+   {% endfor %}
+{% else %}
+   <div class="gallery">
+   {% for img in gallery.images %}
+      <div class="thumbnail" >
+         <a href="#img-id" onclick="displayImage('{{ img }}')"><img class="lazyload" src="{{ img }}" /></a>
+      </div>
+   {% endfor %}
+   </div>
+{% endif %}
+</div>
+
+

@@ -1,0 +1,12 @@
+- name: Home
+  description: A Celebration of Life
+  link: /
+- name: Gallery
+  description: Photos and artwork 
+  link: /gallery/gallery.html
+- name: Writings
+  description: Collection of his writings about love, life and his travels
+  link: /writings.html
+- name: Memories
+  description: Memories from family and friends 
+  link: /memories.html

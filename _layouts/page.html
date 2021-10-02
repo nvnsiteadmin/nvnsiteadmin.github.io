@@ -1,0 +1,20 @@
+---
+layout: default
+excerpt_separator: <!--more-->
+---
+
+<div id="page-info" style="margin: 24px;">
+<h3 style="margin-bottom: 5px">{{ page.title }}</h3>
+{% if page.author %}<span>by {{ page.author }}</span>{% endif %}
+{% if page.description %}
+<em>{{ page.description }}</em>
+{% endif %}
+{{ page.lastUpdate }}
+</div>
+
+<div id="page-content">
+{{ content }}
+</div>
+
+<stye>
+</stye>
