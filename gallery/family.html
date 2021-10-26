@@ -1,7 +1,918 @@
----
-layout: images
-title: Family & Friends
-description: Pictures of Nguu's family and friends
-gallery_category: family
----
 
+<!DOCTYPE html> 
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+        <title>Nguyen Van Nguu - Family & Friends </title>
+    <meta charset="utf-8">
+    <meta name="author" value="">
+    <meta name="description" value="A celebration of life">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">    -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <meta property="og:title" content="Nguyen Van Nguu - Family &amp; Friends ">
+    <meta property="og:image" content=" /assets/images/nguu_portrait_sm.jpg ">  
+    <meta property="og:description" content=" - Pictures of Nguu&#39;s family and friends ">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <link rel="stylesheet" href="/assets/styles/normalize.css" />
+    <link rel="stylesheet" href="/assets/styles/skeleton.css" />
+    <link rel="stylesheet" href="/assets/styles/site.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+    <script type="text/javascript">
+        let quotes = [];
+        
+        let ind = 0;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Life part 2", year: 2015, text: "Life is to get up in the morning<br />Be inspired by love and gratefulness<br />For love relieves the loneliness<br />And appreciation enhances the happiness<br />Pass dreams into actions<br />And embrace results of actions into new dreams<br />There is always tomorrow" });
+        ind++;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Missing the Childhood River", year: 2017, text: "Tens of years living far away from Vietnam<br />This morning suddenly I missed and saw in my dream the Perfume River<br />And the paper boat that I set afloat on the River<br />In an autumn festival of my childhood<br /><br />The boat that carried my childhood smile<br />I wonder where is it now?<br />But I always embrace it tightly along my life <br />Oh the paper boat and the river of yesterday" });
+        ind++;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Home is a Feeling", year: 2019, text: "I can still remember thinking <br />With a feeling of peace and belonging <br />Home is the place where you feel in control <br />Home isn’t a place, it’s a feeling<br /> <br />You can be miles away and still be at home <br />By reading your favorite childhood book <br />A feeling of home will grab your heart <br />And you feel most comfortable and smart<br />" });
+        ind++;
+        
+        
+        quotes.push({ author: "Nguyen Van Nguu", title: "Some thought upon reaching 70 years old", year: 2017, text: "Reaching 50, people consider themselves old, but at 70, I still feel young. In the morning I sweep the garden, watering the plants if there was no rain in the previous day, tender and plant herbs, and flower plants. Other daily activities include listening to news and music from radio and television, searching the internet for news and mails from children, friends, and colleagues. In some days I help in cleaning the house. In the evening, I watch the moon while consuming a glass of beer. <br /><br />Being young is beautiful, but being old is comfortable, I thought! <br />" });
+        ind++;
+        
+    </script>
+    
+    
+</head>
+<body class="container" >
+        <header style="text-align: center;">
+        <div>
+            <a href="/index.html"><img src="/assets/images/banner.jpg" class="banner lazyload"/></a>
+        </div>
+        
+        <div>
+            <nav class="menuitems">
+            
+                <span class="nav-item"><a class="button" href="/">Home</a></span>
+            
+                <span class="nav-item"><a class="button" href="/gallery/gallery.html">Gallery</a></span>
+            
+                <span class="nav-item"><a class="button" href="/writings.html">Writings</a></span>
+            
+                <span class="nav-item"><a class="button" href="/memories.html">Memories</a></span>
+            
+            </nav>
+        </div>
+
+        <div style="margin-bottom: 2rem; ">
+            <span class=""> Pictures of Nguu's family and friends  </span>
+        </div>
+
+    </header>
+
+    <div id="content" >
+        <div id="page-info" style="margin: 24px;">
+<h3 style="margin-bottom: 5px">Family & Friends</h3>
+
+
+<em>Pictures of Nguu's family and friends</em>
+
+
+</div>
+
+<div id="page-content">
+<script type="text/javascript">   
+function displayImage(img_name) {
+    let div = document.getElementById("img-display");
+    let canvasDiv = div.getElementsByClassName('img-div')[0];
+    let img = new Image();
+    let imgWidth = img.naturalWidth ;
+    let imgHeight = img.naturalHeight ;
+    img.onload = function () {
+       imgWidth = this.width;
+       imgHeight = this.height;
+       console.log(imgWidth + " " + imgHeight);
+       img.style.width = (imgWidth >= imgHeight) ? "90%" : "40%";
+    }
+
+    img.src = img_name;
+    console.log(imgWidth + " " + imgHeight);
+    
+    img.style.margin = "auto";
+    canvasDiv.innerHTML = "";
+    canvasDiv.appendChild(img);
+    div.style.display = 'block';
+}
+</script>
+
+<style type="text/css">
+
+.show-image {
+    position: fixed;
+    top:  15%;
+    overflow: auto;
+    z-index: 10; 
+    width: 90%;
+    height: 1024px;
+    max-height: 80%;
+    background-color: #e5ecfc;
+    border-radius: 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.img-div {
+   width: 100%;
+   height: 88%;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.close-div {
+   width: 100%;
+   height: 75px;
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;   
+}
+
+
+</style>
+
+
+
+<div id="img-display" class="container show-image">  
+   <div id="top-border" style="height: 25px;"></div>
+   <div class="img-div"> </div>
+   <div class="close-div" > <button onclick="toggleElementDisplay('img-display')">close</button> </div>
+</div>
+<div >
+
+
+   
+   <div style="margin-bottom: 35px">
+
+      <span><h5>Vietnam</h5></span>
+      <div class="gallery">
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/papa_and_siblings.jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/papa_and_siblings.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/He 1967 o Nha Trang.jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/He 1967 o Nha Trang.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/vietnam_visit.jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/vietnam_visit.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/ha long bay 1998 A12072020.jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/ha long bay 1998 A12072020.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/ha long bay 1998 B12072020.jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/ha long bay 1998 B12072020.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/papa_scans_0006 (2).jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/papa_scans_0006 (2).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/papa_scans_0006 (3).jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/papa_scans_0006 (3).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/With Mui in 2005.JPG')"><img class="lazyload" src="/assets/images/photos/Vietnam/With Mui in 2005.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Vietnam/With Elvie Tet Binh Than.jpg')"><img class="lazyload" src="/assets/images/photos/Vietnam/With Elvie Tet Binh Than.jpg" /></a>
+            </div>
+            
+      </div>
+      
+   </div>
+   
+   <div style="margin-bottom: 35px">
+
+      <span><h5>Philippines</h5></span>
+      <div class="gallery">
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa and mama.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa and mama.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0011_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0011_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0003_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0003_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0003_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0003_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0004_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0004_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0005_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0005_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0005_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0005_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0007_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0007_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0007_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0007_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_7.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_7.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0008_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0008_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0008_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0008_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0009_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0009_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0009_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0009_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0011_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0011_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0011_5.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0011_5.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0012_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0012_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0012_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0012_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0013_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0013_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0014_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0014_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0014_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0014_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0014_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0014_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0018_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0018_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0018_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0018_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0018_5.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0018_5.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0019_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0019_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0020_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0020_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0022_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0022_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0023_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0023_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0023_5.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0023_5.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0024_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0024_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0024_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0024_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0023_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0023_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0015_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0015_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0015_4.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0015_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0017_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0017_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0010_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0010_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0010_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0010_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0025_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0025_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0026_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0026_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_12092021_0028_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_12092021_0028_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans11092021_0001_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans11092021_0001_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans11092021_0002_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans11092021_0002_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans11092021_2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans11092021_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans11092021_3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans11092021_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_0004 (2).jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_0004 (2).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_0004 (3).jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_0004 (3).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa_scans_0004 (4).jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa_scans_0004 (4).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa barbecuing.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa barbecuing.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/baptism.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/baptism.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa and nanay.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa and nanay.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Tierra Bella2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Tierra Bella2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa and tito sangko 1.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa and tito sangko 1.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/papa and tito sangko 2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/papa and tito sangko 2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/lemai and papa.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/lemai and papa.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/lemai lekim and papa.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/lemai lekim and papa.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Tierra Bella.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Tierra Bella.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/old photo 1.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/old photo 1.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Quezon City1.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Quezon City1.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Quezon City2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Quezon City2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Quezon City 3.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Quezon City 3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Quezon City 3-2.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Quezon City 3-2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Nguu may 2010.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Nguu may 2010.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/1_SIKHAY TEAM.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/1_SIKHAY TEAM.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/CDO_5.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/CDO_5.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/CIMG3002-Nguu-Elvi_QuezonCity.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/CIMG3002-Nguu-Elvi_QuezonCity.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/CIMG3003.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/CIMG3003.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/CIMG3008-Nguu-Elvi.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/CIMG3008-Nguu-Elvi.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/A With Krishna and Fe Feb 2020.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/A With Krishna and Fe Feb 2020.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8218.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8218.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8220.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8220.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8222.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8222.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8228.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8228.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8226.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8226.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8271.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8271.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8478.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8478.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8479.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8479.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8482.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8482.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8739.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8739.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/VNS_8741.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/VNS_8741.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1014042.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1014042.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1015584.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1015584.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1015590.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1015590.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1015625.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1015625.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1015632.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1015632.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1017300.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1017300.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1017317.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1017317.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/P1017326.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/P1017326.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/PA040092.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/PA040092.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/PA040093.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/PA040093.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/SAM_0367.JPG')"><img class="lazyload" src="/assets/images/photos/Philippines/SAM_0367.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/TB Mar 2017 A.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/TB Mar 2017 A.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/Sikhay Mar 17.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/Sikhay Mar 17.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/TB Mar 2017 A.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/TB Mar 2017 A.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/TB Mar 2017 B.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/TB Mar 2017 B.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/TB Mar 2017 C.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/TB Mar 2017 C.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Philippines/IMG_20191228_120657.jpg')"><img class="lazyload" src="/assets/images/photos/Philippines/IMG_20191228_120657.jpg" /></a>
+            </div>
+            
+      </div>
+      
+   </div>
+   
+   <div style="margin-bottom: 35px">
+
+      <span><h5>Italy</h5></span>
+      <div class="gallery">
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/1993 Rome.jpg')"><img class="lazyload" src="/assets/images/photos/Italy/1993 Rome.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/1997 Rome.jpg')"><img class="lazyload" src="/assets/images/photos/Italy/1997 Rome.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/1997 Rome 2.jpg')"><img class="lazyload" src="/assets/images/photos/Italy/1997 Rome 2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/1997.jpg')"><img class="lazyload" src="/assets/images/photos/Italy/1997.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/old photo 14.jpg')"><img class="lazyload" src="/assets/images/photos/Italy/old photo 14.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/P8300063.JPG')"><img class="lazyload" src="/assets/images/photos/Italy/P8300063.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/P9070074.JPG')"><img class="lazyload" src="/assets/images/photos/Italy/P9070074.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/PA060096.JPG')"><img class="lazyload" src="/assets/images/photos/Italy/PA060096.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/PA060097.JPG')"><img class="lazyload" src="/assets/images/photos/Italy/PA060097.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Italy/papa_scans_11092021_0002.jpg')"><img class="lazyload" src="/assets/images/photos/Italy/papa_scans_11092021_0002.jpg" /></a>
+            </div>
+            
+      </div>
+      
+   </div>
+   
+   <div style="margin-bottom: 35px">
+
+      <span><h5>USA</h5></span>
+      <div class="gallery">
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/Bloom jan 2009 7.JPG')"><img class="lazyload" src="/assets/images/photos/USA/Bloom jan 2009 7.JPG" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0387.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0387.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0388.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0388.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0393.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0393.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0394.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0394.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0400.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0400.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0406.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0406.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0407.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0407.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0451.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0451.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0454.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0454.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0455.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0455.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0474.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0474.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0477_BURST002.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0477_BURST002.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0478.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0478.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0499.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0499.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/IMAG0502.jpg')"><img class="lazyload" src="/assets/images/photos/USA/IMAG0502.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/papa_scans_0007 (2).jpg')"><img class="lazyload" src="/assets/images/photos/USA/papa_scans_0007 (2).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/papa_scans_0007 (3).jpg')"><img class="lazyload" src="/assets/images/photos/USA/papa_scans_0007 (3).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/papa_scans_0007 (4).jpg')"><img class="lazyload" src="/assets/images/photos/USA/papa_scans_0007 (4).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/papa_scans_0008 (2).jpg')"><img class="lazyload" src="/assets/images/photos/USA/papa_scans_0008 (2).jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/Bloomington1.jpg')"><img class="lazyload" src="/assets/images/photos/USA/Bloomington1.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/Bloomington 3.jpg')"><img class="lazyload" src="/assets/images/photos/USA/Bloomington 3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/Bloomington2.jpg')"><img class="lazyload" src="/assets/images/photos/USA/Bloomington2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/Olympia 2.jpg')"><img class="lazyload" src="/assets/images/photos/USA/Olympia 2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/USA/Olympia1.jpg')"><img class="lazyload" src="/assets/images/photos/USA/Olympia1.jpg" /></a>
+            </div>
+            
+      </div>
+      
+   </div>
+   
+   <div style="margin-bottom: 35px">
+
+      <span><h5>Other</h5></span>
+      <div class="gallery">
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/1983 IITA 1.jpg')"><img class="lazyload" src="/assets/images/photos/Other/1983 IITA 1.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/1983-1984 IITA.jpg')"><img class="lazyload" src="/assets/images/photos/Other/1983-1984 IITA.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/1986-1987 IITA Ibadan.jpg')"><img class="lazyload" src="/assets/images/photos/Other/1986-1987 IITA Ibadan.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/1986-1987 London.jpg')"><img class="lazyload" src="/assets/images/photos/Other/1986-1987 London.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/london.jpg')"><img class="lazyload" src="/assets/images/photos/Other/london.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0003_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0003_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0003_3.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0003_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0004_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0004_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/A Niger perch.jpg')"><img class="lazyload" src="/assets/images/photos/Other/A Niger perch.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0007_3.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0007_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0006_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0006_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0007_4.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0007_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0003_3.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0003_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0004_3.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0004_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0005_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0005_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0006_4.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0006_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0007_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0007_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0008_4.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0008_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0009_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0009_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0009_3.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0009_3.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0009_4.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0009_4.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/papa_scans_11092021_0010_2.jpg')"><img class="lazyload" src="/assets/images/photos/Other/papa_scans_11092021_0010_2.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/Sydney 200413112019.jpg')"><img class="lazyload" src="/assets/images/photos/Other/Sydney 200413112019.jpg" /></a>
+            </div>
+      
+            <div class="thumbnail" >
+               <a href="#img-id" onclick="displayImage('/assets/images/photos/Other/Sydney.jpg')"><img class="lazyload" src="/assets/images/photos/Other/Sydney.jpg" /></a>
+            </div>
+            
+      </div>
+      
+   </div>
+   
+
+</div>
+
+
+
+</div>
+
+<stye>
+</stye>
+    </div>
+
+    
+
+    <footer class="container" style="width: 100%;">
+        <div id="quotes-div" style="font-size: 12px; overflow: hidden;" >
+        </div>
+        <div id="legal-info" style="position: relative;">
+            Copyright &COPY; 2021 Nguyen Van Nguu. All rights reserved
+        </div>
+    </footer>
+    
+    <script type="text/javascript" >
+        $("img.lazyload").lazyload();
+
+        setRandomQuote();
+        setInterval(function(){
+            setRandomQuote();
+        }, 15000);
+
+    </script>
+</body>
+
+</html> 
